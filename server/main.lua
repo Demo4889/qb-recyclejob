@@ -23,7 +23,7 @@ RegisterNetEvent('qb-recycle:server:getItem', function()
   local odd = math.random(1, 10)
   if luck == odd then
     local random = math.random(1, 3)
-    Player.Functions.AddItem(Config.LuckyItem, random)
+    Player.Functions.AddItem(Config.LuckyItem)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.LuckyItem], 'add')
   end
 end)
